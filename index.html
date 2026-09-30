@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>你的名字 · 个人主页</title>
+  <meta name="description" content="个人主页：关于我、项目作品、经历与联系方式。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 背景网格装饰 -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- 导航栏 -->
+  <header class="navbar" id="navbar">
+    <nav class="container nav-inner">
+      <a href="#hero" class="logo mono">&lt;你的名字 /&gt;</a>
+      <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="mono">01. 关于</a></li>
+        <li><a href="#projects" class="mono">02. 项目</a></li>
+        <li><a href="#timeline" class="mono">03. 经历</a></li>
+        <li><a href="#contact" class="mono">04. 联系</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero container" id="hero">
+      <div class="hero-text">
+        <p class="hero-hello mono">&gt; 你好，我是 <span class="accent">_</span></p>
+        <h1 class="hero-name">你的名字</h1>
+        <p class="hero-role mono"><span id="typed"></span><span class="cursor">▍</span></p>
+        <p class="hero-desc">
+          用一两句话介绍自己：你做什么、擅长什么、最近在折腾什么。
+          保持简短有力，这里的文字随时可以换成你自己的。
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">查看项目 →</a>
+          <a href="#contact" class="btn btn-ghost">联系我</a>
+        </div>
+        <div class="hero-socials mono">
+          <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="mailto:you@example.com">邮箱 ↗</a>
+          <a href="https://blog.example.com" target="_blank" rel="noopener">博客 ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-terminal">
+        <div class="term-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="term-title mono">~/profile.json</span>
+        </div>
+        <pre class="term-body mono">{
+  <span class="json-key">"name"</span>:     <span class="json-str">"你的名字"</span>,
+  <span class="json-key">"role"</span>:     <span class="json-str">"全栈工程师"</span>,
+  <span class="json-key">"location"</span>: <span class="json-str">"中国 · 你的城市"</span>,
+  <span class="json-key">"skills"</span>:   [<span class="json-str">"JavaScript"</span>, <span class="json-str">"Python"</span>],
+  <span class="json-key">"interest"</span>: [<span class="json-str">"开源"</span>, <span class="json-str">"效率工具"</span>],
+  <span class="json-key">"open_to_work"</span>: <span class="json-bool">true</span>,
+  <span class="json-key">"coffee"</span>:   <span class="json-num">∞</span>
+}</pre>
+      </div>
+    </section>
+
+    <!-- ===== 关于我 + 技能 ===== -->
+    <section class="section container reveal" id="about">
+      <h2 class="section-title"><span class="mono accent">01.</span> 关于我</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            这里写你的故事：你是谁、从哪里来、现在在做什么。写两三段就好，
+            别写成简历——个人主页的故事感比信息量更重要。
+          </p>
+          <p>
+            可以聊聊你的技术方向、你解决过什么有意思的问题、你对什么东西好奇。
+            下面这些「编辑我」的提示都是占位内容，直接在 index.html 里搜索替换即可。
+          </p>
+          <p class="about-facts mono">
+            <span>📍 你的城市</span>
+            <span>💼 某公司 · 某职位</span>
+            <span>🎓 某大学 · 某专业</span>
+          </p>
+        </div>
+        <div class="skills">
+          <div class="skill-group">
+            <h3 class="mono">// 前端</h3>
+            <div class="tags">
+              <span class="tag">HTML / CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Vue</span>
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="mono">// 后端 &amp; 数据</h3>
+            <div class="tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3 class="mono">// 工具 &amp; 其他</h3>
+            <div class="tags">
+              <span class="tag">Git</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Nginx</span>
+              <span class="tag">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 项目作品 ===== -->
+    <section class="section container reveal" id="projects">
+      <h2 class="section-title"><span class="mono accent">02.</span> 项目作品</h2>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-thumb thumb-a mono" aria-hidden="true">{ } 项目 A</div>
+          <div class="project-body">
+            <h3>项目名称 A</h3>
+            <p>一句话说清这个项目做了什么、解决了什么问题、用了什么亮点技术。控制在两行以内。</p>
+            <div class="tags">
+              <span class="tag">Vue</span><span class="tag">Node.js</span><span class="tag">MySQL</span>
+            </div>
+            <div class="project-links mono">
+              <a href="https://github.com/yourname/project-a" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="#" target="_blank" rel="noopener">在线演示 ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb thumb-b mono" aria-hidden="true">&lt;/&gt; 项目 B</div>
+          <div class="project-body">
+            <h3>项目名称 B</h3>
+            <p>同上：项目做了什么、你的角色、结果如何。没有链接的项目可以先删掉对应链接。</p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Redis</span>
+            </div>
+            <div class="project-links mono">
+              <a href="https://github.com/yourname/project-b" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb thumb-c mono" aria-hidden="true">λ 项目 C</div>
+          <div class="project-body">
+            <h3>项目名称 C</h3>
+            <p>小工具、开源贡献、课程大作业都可以放。重点是讲清楚「为什么做」和「做成了什么」。</p>
+            <div class="tags">
+              <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Vite</span>
+            </div>
+            <div class="project-links mono">
+              <a href="https://github.com/yourname/project-c" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="#" target="_blank" rel="noopener">在线演示 ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p class="more-link mono">&gt; 更多项目见 <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub 主页 ↗</a></p>
+    </section>
+
+    <!-- ===== 经历时间线 ===== -->
+    <section class="section container reveal" id="timeline">
+      <h2 class="section-title"><span class="mono accent">03.</span> 经历</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <p class="timeline-date mono">2024 — 至今</p>
+            <h3>某科技公司 · 前端工程师</h3>
+            <p>负责什么产品/模块，做出了什么成绩（最好带数字：性能提升 X%、日活 X 万）。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <p class="timeline-date mono">2020 — 2024</p>
+            <h3>某大学 · 计算机科学与技术（本科）</h3>
+            <p>主修课程、拿过的奖项、做过的重要课程项目或实验室经历。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <p class="timeline-date mono">更早</p>
+            <h3>开始写代码的那一年</h3>
+            <p>聊聊你是怎么入坑的——这段故事往往是最有个性的部分。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 联系方式 ===== -->
+    <section class="section container reveal contact" id="contact">
+      <h2 class="section-title"><span class="mono accent">04.</span> 联系我</h2>
+      <p class="contact-lead">
+        有项目想合作、问题想交流，或者只是打个招呼？欢迎随时来信，一般 24 小时内回复。
+      </p>
+      <a class="btn btn-primary btn-lg" href="mailto:you@example.com">say hi @ you@example.com</a>
+      <div class="contact-socials mono">
+        <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+        <span aria-hidden="true">/</span>
+        <a href="https://blog.example.com" target="_blank" rel="noopener">博客</a>
+        <span aria-hidden="true">/</span>
+        <a href="#" target="_blank" rel="noopener">知乎</a>
+        <span aria-hidden="true">/</span>
+        <a href="#" target="_blank" rel="noopener">B 站</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <p>&lt;/&gt; © <span id="year">2026</span> 你的名字 · 用 ❤ 和 ZCode 搭建</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
